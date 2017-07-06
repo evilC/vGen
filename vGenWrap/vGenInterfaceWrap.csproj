@@ -183,7 +183,8 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>REM copy $(ProjectDir)..\..\vJoyInterface\objfre_wxp_x86\i386\*.dll $(TargetDir)\.</PostBuildEvent>
+    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)\vGenBasicWrapper
+REM copy $(ProjectDir)..\..\vJoyInterface\objfre_wxp_x86\i386\*.dll $(TargetDir)\.</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>
