@@ -1,5 +1,9 @@
 #SingleInstance force
 
+; Load CLR library that allows us to load C# DLLs
+#include CLR.ahk
+
+; Instantiate class from C# DLL
 asm := CLR_LoadLibrary("vGenBasicWrapper.dll")
 vGen := asm.CreateInstance("vGenBasicWrapper")
 
