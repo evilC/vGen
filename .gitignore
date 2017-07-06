@@ -30,6 +30,16 @@ vGenTest/vXboxTest/Release/
 *.a
 *.lib
 
+# Added by evilC
+*.pdb
+bin/
+obj/
+debug/
+Debug_Stat
+*.cache
+*.suo
+*.zip
+
 # Executables
 *.exe
 *.out
