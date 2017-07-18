@@ -138,5 +138,26 @@ public class vGenBasicWrapper
             var ret = vGenWrapper.SetDevAxis(hDev, axis, value);
             return (ret == 0);
         }
+
+        public bool SetButton(uint button, bool value)
+        {
+            if (!IsAcquired && !Acquire())
+            {
+                return false;
+            }
+            var ret = vGenWrapper.SetDevButton(hDev, button, value);
+            return (ret == 0);
+        }
+
+        public bool SetPov(uint pov, float value)
+        {
+            if (!IsAcquired && !Acquire())
+            {
+                return false;
+            }
+            var ret = vGenWrapper.SetDevPov(hDev, pov, value);
+            return (ret == 0);
+        }
+
     }
 }
